@@ -12,6 +12,7 @@ export const ButtonContainer = styled.TouchableOpacity <ButtonContainerProps>`
     width: 100%;
     height: 48px;
     border-radius: 4px;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     ${(props) => (props.margin? `margin: ${props.margin};` : '') }
@@ -28,8 +29,14 @@ export const ButtonSecundary = styled(ButtonContainer) <ButtonContainerProps>`
     width: 100%;
     height: 100%;
     border-radius: 4px;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     ${(props) => (props.margin? `margin: ${props.margin};` : '') };
     
+ `;
+ export const ActivityIndicatorButton = styled.ActivityIndicator`
+    
+    margin-left: 8px;
+
  `;
