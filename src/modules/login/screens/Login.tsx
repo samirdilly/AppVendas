@@ -4,7 +4,9 @@ import Input from "../../../shared/components/input/Input";
 import Button from "../../../shared/components/button/Button";
 import Text from "../../../shared/components/text/Text";
 import { theme } from "../../../shared/themes/theme";
-import { Icon } from "../../../shared/components/icon/icon";
+import { Icon } from "../../../shared/components/icon/Icon";
+
+
 
 
 
@@ -18,8 +20,7 @@ const Login = () => {
     return(
         <View>
             <ContainerLogin>
-                <Icon name="home3"/>
-                <Text>teste de estilo</Text>
+                <Icon name="home3" color='blue' size={44}/>
                 <Input 
                 errorMessage="Usuário ou senha inválidos" 
                 placeholder="Digite seu E-mail" 
@@ -29,7 +30,7 @@ const Login = () => {
                 type={theme.buttons.buttonsTheme.primary} 
                 margin='16px' 
                 title="ENTRAR" 
-    
+                
                 onPress={handleOnPress}
                 />
             </ContainerLogin>
