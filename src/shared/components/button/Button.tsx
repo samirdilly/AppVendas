@@ -1,5 +1,5 @@
 import { ActivityIndicator, TouchableOpacityProps } from "react-native";
-import { ActivityIndicatorButton, ButtonContainer, ButtonSecundary, GradientButton } from "./Button.styled";
+import { ActivityIndicatorButton, ButtonContainer, ButtonDisabled, ButtonSecundary, GradientButton } from "./Button.styled";
 import Text from "../text/Text";
 import { theme } from "../../themes/theme";
 import { textTypes } from "../text/textTypes";
@@ -30,6 +30,14 @@ const Button = ({title, margin, type, loading, disabled, onPress, ...props}: But
         )}
         </>
     );
+
+    if (disabled) {
+        return(
+            <ButtonDisabled {...props} margin={margin}>
+                {renderText(theme.colors.neutralTheme.white)}
+            </ButtonDisabled>
+        )
+    }
 
     
 
