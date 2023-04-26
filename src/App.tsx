@@ -3,7 +3,9 @@ import Login from "./modules/login";
 
 
 
+
 const App = () => {
+
     return(
         <SafeAreaView>
             <Login/>

@@ -37,7 +37,7 @@ const Text = ({color,margin, type, ...props}: TextProps) => {
             case textTypes.PARAGRAPH_BOLD:
             case textTypes.PARAGRAPH_LIGHT:
             case textTypes.PARAGRAPH_REGULAR:                 
-            case textTypes.PARAGRAPH_SEMI_BOLD:                 
+            case textTypes.PARAGRAPH_SEMI_BOLD:                
             default:
                 return '14px';
         }
@@ -59,12 +59,12 @@ const Text = ({color,margin, type, ...props}: TextProps) => {
             case textTypes.BUTTON_LIGHT:
                 return 'Poppins-Ligth';
 
+            case textTypes.BUTTON_SEMI_BOLD:
             case textTypes.TITLE_SEMI_BOLD:
             case textTypes.SUB_TITLE_SEMI_BOLD:
             case textTypes.PARAGRAPH_SMALL_SEMI_BOLD:
             case textTypes.PARAGRAPH_SEMI_BOLD:
-            case textTypes.BUTTON_SEMI_BOLD:
-                 return 'Poppins-SemiBold'; 
+                return 'Poppins-SemiBold';
 
             case textTypes.TITLE_REGULAR:
             case textTypes.SUB_TITLE_REGULAR:
