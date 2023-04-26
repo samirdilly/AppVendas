@@ -15,7 +15,11 @@ const Login = () => {
         <View>
             <ContainerLogin>
                 <Text>teste de estilo</Text>
-                <Input placeholder="Digite seu E-mail" title="E-mail"/>
+                <Input 
+                errorMessage="Usuário ou senha inválidos" 
+                placeholder="Digite seu E-mail" 
+                title="E-mail"
+                />
                 <Button  
                 type={theme.buttons.buttonsTheme.primary} 
                 margin='16px' 
