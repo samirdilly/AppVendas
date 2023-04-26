@@ -6,10 +6,11 @@ import { useMemo } from "react";
 interface TextProps extends TextPropsNative {
     color?: string;
     type?: string;
+    margin?: string;
 }
 
 
-const Text = ({color, type, ...props}: TextProps) => {
+const Text = ({color,margin, type, ...props}: TextProps) => {
 
     const handleFontSize = useMemo(() => {
         switch (type) {
@@ -76,7 +77,7 @@ const Text = ({color, type, ...props}: TextProps) => {
     }, [type] );
 
     return (
-        <ContainerText fontFamily={fontFamily} fontSize={handleFontSize} color={color} {...props}/>
+        <ContainerText customMargin={margin} fontFamily={fontFamily} fontSize={handleFontSize} color={color} {...props}/>
     )
 };
 
