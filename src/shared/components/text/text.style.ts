@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 interface ContainerTextProps {
     color?: string;
     fontSize: string;
-    fontFamily: 'Poppins-Bold' | 'Poppins-Ligth' | 'Poppins-Regular';
+    fontFamily: 'Poppins-Bold' | 'Poppins-Ligth' | 'Poppins-Regular' | 'Poppins-SemiBold';
 }
 
 
