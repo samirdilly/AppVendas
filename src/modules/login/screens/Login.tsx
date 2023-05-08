@@ -5,6 +5,8 @@ import Button from "../../../shared/components/button/Button";
 import Text from "../../../shared/components/text/Text";
 import { theme } from "../../../shared/themes/theme";
 import { Icon } from "../../../shared/components/icon/Icon";
+import axios from "axios";
+
 
 
 
@@ -13,7 +15,7 @@ import { Icon } from "../../../shared/components/icon/Icon";
 
 const Login = () => {
 
-    const handleOnPress = () => {
+    const handleOnPress = async () => {
         console.log("clicou");
     };
 
