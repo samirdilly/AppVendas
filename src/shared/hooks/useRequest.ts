@@ -2,13 +2,15 @@ import { useState } from "react";
 import { connectionAPIPost } from "../functions/connection/connectionAPI";
 import { RequestLogin } from "../types/requestLogin";
 import { ReturnLogin } from "../types/returnLogin";
-import { UserType } from "../types/userType";
+
 
 import { userUserReducer } from "../../store/reducers/userReducer/useUserReducer";
 import { useGlobalReducer } from "../../store/reducers/globalReducer/useGlobalReducer";
+import { NavigationProp, ParamListBase, useNavigation } from "@react-navigation/native";
 
 
 export const useRequest = () => {
+     const {navigate} = useNavigation<NavigationProp<ParamListBase>>();
      const {setUser} = userUserReducer();
      const {setModal} = useGlobalReducer();
      const [loading, setLoading] = useState<boolean>(false);
@@ -20,6 +22,7 @@ export const useRequest = () => {
         await connectionAPIPost<ReturnLogin>('http://192.168.254.165:8080/auth', body)
         .then((result) => {
             setUser(result.user);
+            navigate('Home');
         })
         .catch(() => {
             setModal({
