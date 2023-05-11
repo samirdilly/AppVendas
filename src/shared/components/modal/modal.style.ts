@@ -11,14 +11,14 @@ export const ContainerModal = styled.View`
     border-top-left-radius: 16px;
     padding: 16px;
     
-    shadow-color:${theme.colors.neutralTheme.black} ;
+    /* shadow-color:${theme.colors.neutralTheme.black} ;
     shadow-offset: {
         width: 0;
         height: 0;
     }
     shadow-opacity: 1;
     shadow-radius: 1px;
-    elevation: 10;
+    elevation: 10; */
 
     
 `;

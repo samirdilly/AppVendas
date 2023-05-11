@@ -3,14 +3,14 @@ import { connectionAPIPost } from "../functions/connection/connectionAPI";
 import { RequestLogin } from "../types/requestLogin";
 import { ReturnLogin } from "../types/returnLogin";
 import { UserType } from "../types/userType";
-import { useDispatch } from "react-redux";
-import { setUserAction } from "../../store/reducers/userReducer";
+
 import { userUserReducer } from "../../store/reducers/userReducer/useUserReducer";
+import { useGlobalReducer } from "../../store/reducers/globalReducer/useGlobalReducer";
 
 
 export const useRequest = () => {
      const {setUser} = userUserReducer();
-     const dispatch = useDispatch();   
+     const {setModal} = useGlobalReducer();
      const [loading, setLoading] = useState<boolean>(false);
      const [errorMessage, setErrorMessage] = useState<string>('');
 
@@ -22,6 +22,11 @@ export const useRequest = () => {
             setUser(result.user);
         })
         .catch(() => {
+            setModal({
+                visible: true,
+                title: 'Erro',
+                text: 'Usuário ou senha inválidos',
+            })
             setErrorMessage('Usuário ou senha inválidos')
         });
 
