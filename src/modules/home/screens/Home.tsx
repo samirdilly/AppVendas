@@ -1,3 +1,4 @@
+import { View } from "react-native/types"
 import Text from "../../../shared/components/text/Text"
 
 const Home = () => {

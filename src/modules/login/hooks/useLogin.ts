@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { NativeSyntheticEvent, TextInputChangeEventData } from "react-native/types";
 import { useRequest } from "../../../shared/hooks/useRequest";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../store";
 import { userUserReducer } from "../../../store/reducers/userReducer/useUserReducer";
 
 export const useLogin = () => {
